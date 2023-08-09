@@ -1,0 +1,102 @@
+
+body, .nav, .menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 500;
+  margin-top: var(--nav-height);
+}
+:root {
+  --nav-height: calc(1vw + 1vh);
+  --nav-margin: calc((100vh - var(--navbar-height))/2);
+  --transition: transform .75s cubic-bezier(.075, .5, 0, 1);
+}
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: calc(100% - 2*var(--navbar-margin));
+  height: var(--navbar-height);
+  background-color: rgba(4, 4, 4, 0.588);
+  padding: calc(var(--index) * 0.5);
+  transition: 0.5s;
+  border-radius: calc(var(--index) * 3); 
+  overflow: hidden;
+  text-align: center;
+  height: calc(var(--index) * 3); 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.menu {
+  margin: 0;
+  padding: 0;
+  width: 0;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.nav input:checked ~ .menu {
+  width: calc(var(--index) * 28); 
+}
+
+.menu li {
+  list-style: none;
+  margin: calc(var(--index) * 0.5);
+  display: inline-block;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.83);
+  /* text-transform: uppercase; */
+  font-weight: 600;
+  font-size: calc(var(--index) / 1.175);
+  transition: 0.5s;
+  display: inline-block;
+}
+
+.menu li a:hover {
+  color: goldenrod;
+}
+
+.nav input {
+  width: calc(var(--index) * 2); 
+  height: calc(var(--index) * 2); 
+
+  cursor: pointer;
+  opacity: 0;
+}
+
+.nav span {
+  position: absolute;
+  left:calc(var(--index) * 0.6); 
+  width: calc(var(--index) * 1.8); 
+  height: calc(var(--index) / 3); 
+  border-radius: 50px;
+  background-color: rgba(255, 255, 255, 0.83);
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.nav input:checked ~ span {
+  background-color:rgba(255, 255, 255, 0.83);
+}
+
+.nav span:nth-child(2) {
+  transform: translateY(calc(var(--index) * -0.4) );
+}
+
+.nav input:checked ~ span:nth-child(2) {
+  transform: translateY(0) rotate(-45deg);
+}
+.nav span:nth-child(3) {
+  transform: translateY(calc(var(--index) * 0.4));
+}
+
+.nav input:checked ~ span:nth-child(3) {
+  transform: translateY(0) rotate(45deg);
+}

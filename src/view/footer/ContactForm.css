@@ -1,0 +1,144 @@
+:root {
+    --index: calc(1vw + 1vh);
+}
+
+.contact-button-container {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 500;
+}
+.contact-button {
+    position: fixed;
+    bottom: 2%;
+    right: calc(var(--index) * 2);
+    background-color: #0000009c;
+    min-width: calc(var(--index) * 3);
+    max-width: calc(var(--index) * 6);
+    max-height: calc(var(--index) * 6.5);
+    width: calc(var(--index) * 4.3);
+    height: calc(var(--index) * 4.3);
+    backdrop-filter: blur(15px);
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: calc(var(--index) * 0.7);
+}
+
+.info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title_contact {
+    font-size: calc(var(--index) * 0.8);
+	line-height: calc(var(--index) * 0.9);
+	color: var(--color-header);
+	width: calc(var(--index) * 13);
+	height: calc(var(--index) * 5);
+  
+}
+.success-message {
+    font-size: calc(var(--index) * 0.8);
+	line-height: calc(var(--index) * 0.9);
+	color: var(--color-header);
+	width: calc(var(--index) * 13);
+	height: calc(var(--index) * 5);
+}
+
+.window {
+    background-color: rgba(0, 0, 0, 0.116);
+    backdrop-filter: blur(5px);
+    padding: calc(var(--index) * 1);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: calc(var(--index) * 19);
+    max-height: calc(var(--index) * 22);
+}
+
+.window input{
+    width: 100%;
+    max-width: calc(var(--index) * 15);
+    font-size: calc(var(--index) * 0.7);
+    margin-bottom: 2%;
+    font-family: outfit-c;
+}
+
+
+.window textarea {
+    width: 100%;
+    max-width: calc(var(--index) * 15);
+ height: calc(var(--index) * 6);
+ font-family: outfit-c;
+    font-size: calc(var(--index) * 0.75);
+
+}
+
+.formInfo {
+    max-width: calc(var(--index) * 15);
+    max-height: calc(var(--index) * 19);
+    z-index: 600;
+}
+
+.loader {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid rgb(218, 206, 32);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+
+.close-button {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: calc(var(--index) * 1.3);
+}
+.sendButton {
+    border: 1px solid white;
+    border-radius: 10%;
+    color: white;
+    padding: calc(var(--index) * 0.2) calc(var(--index) * 0.8);
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: calc(var(--index) * 0.8);
+    transition-duration: 0.4s;
+    cursor: pointer;
+    background-color: transparent;
+    width: calc(var(--index) * 5.3);
+    height: calc(var(--index) * 1.8);
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out; 
+}
+
+.sendButton:active {
+    background-color: #000000;
+    transform: scale(0.95); 
+}
+.conversations-visitor-open-icon {
+    position: fixed;
+    bottom: 2%;
+    right: calc(var(--index) * 0.2);
+    min-width: calc(var(--index) * 2);
+    width: calc(var(--index) * 3);
+    height: calc(var(--index) * 3.5);
+    max-width: calc(var(--index) * 3);
+    max-height: calc(var(--index) * 3.5);
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: calc(var(--index) * 0.7);
+}
